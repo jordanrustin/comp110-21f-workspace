@@ -1,7 +1,8 @@
 """CLUTCH TIME: A choose your own adventure game including different sports!"""
 
-__author__: str = "730308364"
 from random import randint
+
+__author__: str = "730308364"
 
 player: str
 points: int = 0
