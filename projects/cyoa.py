@@ -10,12 +10,14 @@ BASK: str = str("\U0001F3C0")
 FOOT: str = str("\U0001F3C8")
 BASE: str = str("\U000026BE")
 
+
 def main() -> None:
     """Entrypoint to the game."""
     global points
     greet()
     decision()
     
+
 def greet() -> None:
     """Greets the user with a welcome and breifing."""
     print("Welcome to CLUTCH TIME!")
@@ -28,6 +30,7 @@ def greet() -> None:
     print("Making risky choices will reward more points, but succeed less often.")
     print(f"Good luck, {player}!")
     
+
 def decision() -> None:
     """Player makes a decision which sport to pursue."""
     global points
@@ -48,9 +51,9 @@ def decision() -> None:
                 if choice == "end game":
                     end_game(points)
       
+
 def basketball() -> None:
     """Runs basketball simulation."""
-
     global points
     global player
     print(f"\n{player}, the clock is winding down and your team is down by 2 points.")
@@ -75,9 +78,9 @@ def basketball() -> None:
     print(next)
     decision()
 
+
 def football(x: int) -> int:
     """Runs football simulation."""
-
     global player
     y: int = 0
     print("It's 4th and goal with one second left on the clock. Your team is down by 2.")
@@ -107,9 +110,9 @@ def football(x: int) -> int:
     points_two: int = x + y
     return points_two
 
+
 def baseball(x: int) -> int:
     """Runs baseball simulation."""
-
     global player
     z: int = 0
     print("You're up to bat. The bases are loaded and you need the GRAND SLAM to win the game.")
@@ -134,11 +137,13 @@ def baseball(x: int) -> int:
     points_three: int = x + z
     return points_three
 
+
 def end_game(x: int) -> None:
     """Ends the game."""
     global player
     print(f"\n{player}, your final point score is: {x}!")
     print("Thanks for playing CLUTCH TIME!")
+
 
 if __name__ == "__main__":
     main()
