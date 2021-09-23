@@ -1,17 +1,14 @@
 """CLUTCH TIME: A choose your own adventure game including different sports!"""
 
 __author__: str = "730308364"
-
 from random import randint
 
 player: str
 points: int = 0
-next: str = str(f"Thanks for playing that sport! Let's play another sport now.")
+next: str = str("Thanks for playing that sport! Let's play another sport now.")
 BASK: str = str("\U0001F3C0")
 FOOT: str = str("\U0001F3C8")
 BASE: str = str("\U000026BE")
-
-
 
 def main() -> None:
     """Entrypoint to the game."""
@@ -19,7 +16,6 @@ def main() -> None:
     greet()
     decision()
     
-
 def greet() -> None:
     """Greets the user with a welcome and breifing."""
     print("Welcome to CLUTCH TIME!")
@@ -52,10 +48,11 @@ def decision() -> None:
                 if choice == "end game":
                     end_game(points)
       
-
 def basketball() -> None:
-    """runs basketball simulation"""
+    """Runs basketball simulation."""
+
     global points
+    global player
     print(f"\n{player}, the clock is winding down and your team is down by 2 points.")
     print("The ball is in your hands! You have an open three-pointer, but your teammate sets a screen and the lane to the basket opens up...")
     print("If you make the risky three, you'll win the game. If you drive and make a layup, the game will go to overtime.")
@@ -79,7 +76,9 @@ def basketball() -> None:
     decision()
 
 def football(x: int) -> int:
-    """runs football simulation"""
+    """Runs football simulation."""
+
+    global player
     y: int = 0
     print("It's 4th and goal with one second left on the clock. Your team is down by 2.")
     print(f"{player}, YOU are the quarterback. You can either pass to your trusty receivers, handoff to your 5-star running back, or trust your own legs to take you to the endzone.")
@@ -109,7 +108,9 @@ def football(x: int) -> int:
     return points_two
 
 def baseball(x: int) -> int:
-    """runs baseball simulation."""
+    """Runs baseball simulation."""
+
+    global player
     z: int = 0
     print("You're up to bat. The bases are loaded and you need the GRAND SLAM to win the game.")
     print("You are sitting with a full count: three balls and two strikes.")
@@ -135,9 +136,9 @@ def baseball(x: int) -> int:
 
 def end_game(x: int) -> None:
     """Ends the game."""
+    global player
     print(f"\n{player}, your final point score is: {x}!")
     print("Thanks for playing CLUTCH TIME!")
-
 
 if __name__ == "__main__":
     main()
