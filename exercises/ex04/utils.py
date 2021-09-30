@@ -32,6 +32,7 @@ def is_equal(list_one: list[int], list_two: list[int]) -> bool:
 
 
 def max(input: list[int]) -> int:
+    """Returns the largest valu ein the list."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     else:
