@@ -98,4 +98,3 @@ def count(freq: list[str]) -> dict[str, int]:
         else:
             result[column] = 1
     return result
-            
